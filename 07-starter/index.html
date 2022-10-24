@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <button class="btn btn--new show-modal">🐷GAME RULES</button>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>
+        Wellcome to 🐷 game! <br />
+        The rules are:
+      </h1>
+      <p>
+        One a turn, a player rolls the die 🎲 repeatedly. The goal is to
+        accumulate many points as possible, adding up (hold) the numbers rolled
+        on the die 🎲. However, if a player rolls a <span>1</span>, the player`s
+        turn is over and any points they have accumulated during this turn are
+        lost. Rolling a <span>1</span> doesn`t delete your entire score from
+        previous turns, just the total earned during that particular roll. A
+        player has to chose to hold (stop rolling the die 🎲) if they do not
+        want to take a chance to of rollin a <span>1</span> and losing all of
+        their points from this turn. If a player chooses to hold 📥, all of the
+        points rolled during that turn are added to his score. When a player
+        reaches a total of <span>100</span> points, the game end and the player
+        is the winner.
+      </p>
+      <h2>🐷🐷🐷</p2>
+    </div>
+
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
